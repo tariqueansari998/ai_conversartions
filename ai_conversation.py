@@ -18,7 +18,7 @@ prompt = PromptTemplate(input_variables=["history","input"],template=template)
 
 @cl.on_chat_start
 def main():
-    model_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
+    model_id = "Qwen/Qwen2.5-Coder-32B-Instruct"
     llm = HuggingFaceEndpoint(
         repo_id=model_id,
         max_length=2000,
