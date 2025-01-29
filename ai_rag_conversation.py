@@ -3,4 +3,4 @@ from resume_vertor_store import load_resume_vector_store,query_resume_vector_sto
 
 load_dotenv()
 load_resume_vector_store()
-query_resume_vector_store(query="Who worked on mach principles")
+query_resume_vector_store(query="Who is tarique ansari")
