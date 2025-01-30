@@ -15,9 +15,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 current_directory = os.path.dirname(os.path.abspath(__file__))
 datasource_directory = os.path.join(current_directory, "resume")
 db_directory = os.path.join(datasource_directory, "db", "chroma_resume_db")
-
 hf_embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-
 
 def load_resume_vector_store():
     print(f"Current directory {current_directory} \n datasource_directory {datasource_directory} \n db_directory {db_directory}")
@@ -73,3 +71,12 @@ def query_resume_vector_store(query):
     for i, doc in enumerate(relevant_docs, 1):
         print(f"Document {i}:\n{doc.page_content}\n")
         print(f"Source : {doc.metadata['source']}\n")
+
+
+def get_retriever():
+    db = Chroma(persist_directory=db_directory, embedding_function=hf_embedding_model,
+                collection_metadata={"hnsw:space": "cosine"})
+    retriever = db.as_retriever(search_type="similarity_score_threshold",
+                            search_kwargs={"k": 3, "score_threshold": 0.1})
+    print("Inside resume vector store to get retriever")
+    return retriever
