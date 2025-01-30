@@ -3,7 +3,7 @@
 ---
 **AI Chatbot Development with LangChain & HuggingFace**
 
-Build context-aware AI chatbots using Python, diving into RAG (Retrieval Augmented Generation) and AI Agents. We'll explore how to create conversational AI that maintains context and conversation history using LangChain for LLM applications and HuggingFace for NLP models.
+Build context-aware AI chatbots using Python, diving into RAG (Retrieval Augmented Generation) and AI Agents. We'll explore how to create conversational AI that maintains context and conversation history using LangChain for LLM applications and HuggingFace & Ollama(running locally) for NLP models.
 
 # Getting started
 
