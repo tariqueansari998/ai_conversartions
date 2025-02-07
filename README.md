@@ -39,7 +39,9 @@ poetry run python .\ai_rag_conversation.py
 ## Contents
 ---
 1. Simple chatbot using chainlit [ai_conversation.py](ai_conversation.py)
-2. Explore RAG [ai_rag_conversation.py](ai_rag_conversation.py)
+2. Explore RAG with langchain [ai_rag_conversation.py](ai_rag_conversation.py). This examples takes resumes as inputs, converts them into a vector datastore.
+While responding to a user query, langchain retriever searches for the documents, in the vector datastore, which could have the correct response. Then creates a prompt with combining user query & chat history.
+This prompt is then fed to an LLM to generate the final response.
 3. Build a chatbot using AI Agents
 
 
