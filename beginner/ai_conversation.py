@@ -14,7 +14,7 @@ Current conversation:
 Human: {input}
 AI:"""
 
-prompt = PromptTemplate(input_variables=["history","input"],template=template)
+prompt = PromptTemplate(input_variables=["history", "input"], template=template)
 
 @cl.on_chat_start
 def main():

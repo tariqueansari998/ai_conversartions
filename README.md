@@ -1,48 +1,55 @@
-# AI Conversations
+### 🔥 Learn AI concepts in my blog [Building AI Applications: A Beginner's Guide to RAG, Agents, and Tools](https://medium.com/@tariqueansari998/building-ai-applications-a-beginners-guide-to-rag-agents-and-tools-19788848bd4f) 
 
----
-**AI Chatbot Development with LangChain & HuggingFace**
+## Table of Contents
+- [About](#-about)
+- [Content](#-content)
+- [How to Build](#-how-to-build)
+- [Documentation](#-documentation)
 
-Build context-aware AI chatbots using Python, diving into RAG (Retrieval Augmented Generation) and AI Agents. We'll explore how to create conversational AI that maintains context and conversation history using LangChain for LLM applications and HuggingFace & Ollama(running locally) for NLP models.
+## 🚀 About
 
-# Getting started
+Learning new technology can be intimidating specially with all the complexities of the topic randomly being served on internet.
 
----
-## Pre-requisites
-* Python 3.10 or above
-* Poetry
+The goal of this repository is to help build AI applications starting with simple chatbots and gradually adding complexities along the way.
 
-## Installation
+## 📑 Content
 
----
-### Python
-* Download & install python from [python website](https://www.python.org/downloads/)
-* Select _Add to path_ option while installation
-### Poetry
-* https://python-poetry.org/docs/#installation
+### Beginner
+1. Simple chatbot using **Chainlit**. [**Refer: ai_conversation.py**](beginner/ai_conversation.py)
+2. Explore **RAG** by creating vector store using custom knowledge base. Use this vector store in chat application. [**Refer: ai_rag_conversation.py**](beginner/ai_rag_conversation.py)
+3. Give more power to AI applications by creating **Agents** and giving it **Tools** to produce desired result. [**Refer: ai_agent_conversation.py**](beginner/ai_agent_conversation.py)
 
-## Run the program
-### Install dependencies required by project from [pyproject.toml](pyproject.toml)
-```commandline
-poetry install
+## 📝 How to run applications
+
+### Pre-requisites
+* Python [Installation Guide](https://www.python.org/downloads/)
+* Poetry [Installation Guide](https://python-poetry.org/docs/#installation)
+* Docker
+
+### Using LLM
+LLM can be used one of the following ways:
+1. APIs from one of the platforms like [HuggingFace](https://huggingface.co/models), [Anthropic](https://console.anthropic.com/dashboard), [OpenAI](https://platform.openai.com/docs/api-reference/introduction) etc
+
+OR
+2. Run LLM locally using Docker
+```shell
+# Open a terminal (Command Prompt or PowerShell for Windows, Terminal for macOS or Linux)
+# Pull docker image for Ollama. Check for latest version https://hub.docker.com/r/ollama/ollama
+docker pull ollama/ollama:0.3.6
+
+#Run Ollama server in detach mode with Docker
+# without GPU
+docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama:0.3.6 
+# with GPU
+docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama:0.3.6
+
+
 ```
-### Refresh poetry file
-```commandline
-poetry lock --no-update
-```
-### Run a program
-```commandline
-poetry run chainlit run .\ai_conversation.py -w --port 8080
-poetry run python .\ai_rag_conversation.py
-```
-
-## Contents
----
-1. Simple chatbot using chainlit [ai_conversation.py](ai_conversation.py)
-2. Explore RAG with langchain [ai_rag_conversation.py](ai_rag_conversation.py). This examples takes resumes as inputs, converts them into a vector datastore.
-While responding to a user query, langchain retriever searches for the documents, in the vector datastore, which could have the correct response. Then creates a prompt with combining user query & chat history.
-This prompt is then fed to an LLM to generate the final response.
-3. Build a chatbot using AI Agents
 
 
+
+## 📚 Documentation
+
+### Getting Started
+Explore the [Getting Started Guide]().
 
