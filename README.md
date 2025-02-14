@@ -46,6 +46,10 @@ docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ol
 
 ```
 
+### Run chainlit application
+```shell
+poetry run chainlit run chatbot.py -w --port 8000
+```
 
 
 ## 📚 Documentation

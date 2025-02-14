@@ -1,9 +1,9 @@
 from langchain.chains.combine_documents.stuff import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_community.llms import Ollama
+from langchain_ollama import OllamaLLM
 
 
-llm = Ollama(model="llama3")
+llm = OllamaLLM(model="llama3")
 # Answer question prompt
 # This system prompt helps the AI understand that it should provide concise answers
 # based on the retrieved context and indicates what to do if the answer is unknown
@@ -27,5 +27,6 @@ qa_prompt = ChatPromptTemplate.from_messages(
 
 print("Inside doc chain")
 doc_chain = create_stuff_documents_chain(llm, qa_prompt)
+print(f"Document retreived :{doc_chain}" )
 
 

@@ -1,9 +1,9 @@
 import chainlit as cl
 from dotenv import load_dotenv
-from langchain_community.llms import HuggingFaceEndpoint
 from langchain import ConversationChain
 from langchain.memory import ConversationBufferMemory
 from langchain.prompts.prompt import PromptTemplate
+from langchain_ollama import OllamaLLM
 
 load_dotenv()
 
@@ -19,8 +19,8 @@ prompt = PromptTemplate(input_variables=["history", "input"], template=template)
 @cl.on_chat_start
 def main():
     model_id = "Qwen/Qwen2.5-Coder-32B-Instruct"
-    llm = HuggingFaceEndpoint(
-        repo_id=model_id,
+    llm = OllamaLLM(
+        model="llama3",
         max_length=2000,
         temperature=0.5,
     )

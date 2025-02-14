@@ -1,9 +1,9 @@
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from resume_vertor_store import get_retriever
 from langchain.chains.history_aware_retriever import create_history_aware_retriever
-from langchain_community.llms import Ollama
+from langchain_ollama import OllamaLLM
 
-llm = Ollama(model="llama3")
+llm = OllamaLLM(model="llama3")
 retriever = get_retriever()
 contextualize_q_system_prompt = (
     "Given a chat history and the latest user question "
