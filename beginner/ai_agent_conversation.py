@@ -6,8 +6,7 @@ from langchain.agents import AgentExecutor, create_react_agent
 from langchain.memory import ConversationBufferMemory
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from langchain_core.tools import Tool
-from langchain_ollama import ChatOllama
-from langchain_core.prompts import PromptTemplate, ChatPromptTemplate
+from langchain_ollama import OllamaLLM
 
 # Load environment variables from .env file
 load_dotenv()
@@ -24,7 +23,6 @@ def get_current_time(*args, **kwargs):
 
 def get_weather_condition(city):
     api_key = os.getenv("WEATHER_API_KEY")
-    print(f"api key is :{api_key}")
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metrics"
     weather_res = requests.get(url=url)
     json_response = weather_res.json()
@@ -46,8 +44,7 @@ tools = [
 
 ]
 
-# Initialize a ChatOpenAI model
-llm = ChatOllama(
+llm = OllamaLLM(
     model="llama3",
     temperature=0,
     max_tokens=1024,
