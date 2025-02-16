@@ -51,21 +51,14 @@ llm = OllamaLLM(
     timeout=None,
     max_retries=2)
 
-
-# Create a structured Chat Agent with Conversation Buffer Memory
 # ConversationBufferMemory stores the conversation history, allowing the agent to maintain context across interactions
 memory = ConversationBufferMemory(
     memory_key="chat_history", return_messages=True)
 
-# Load the correct JSON Chat Prompt from the hub
 prompt = hub.pull("hwchase17/react")
 
-# create_structured_chat_agent initializes a chat agent designed to interact using a structured prompt and tools
-# It combines the language model (llm), tools, and prompt to create an interactive agent
 agent = create_react_agent(llm=llm, tools=tools, prompt=prompt)
 
-# AgentExecutor is responsible for managing the interaction between the user input, the agent, and the tools
-# It also handles memory to ensure context is maintained throughout the conversation
 agent_executor = AgentExecutor.from_agent_and_tools(
     agent=agent,
     tools=tools,
