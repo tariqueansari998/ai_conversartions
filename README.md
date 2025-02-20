@@ -28,7 +28,7 @@ The goal of this repository is to help build AI applications starting with simpl
 
 ### Using LLM
 LLM can be used one of the following ways:
-1. APIs from one of the platforms like [HuggingFace](https://huggingface.co/models), [Anthropic](https://console.anthropic.com/dashboard), [OpenAI](https://platform.openai.com/docs/api-reference/introduction) etc
+1. APIs from one of the platforms like [HuggingFace](https://huggingface.co/models), [Anthropic](https://console.anthropic.com/dashboard), [OpenAI](https://platform.openai.com/docs/api-reference/introduction) etc. Add all your API keys in the [.env](/.env)
 
 OR
 2. Run LLM locally using Docker
@@ -43,17 +43,36 @@ docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
 # with GPU
 docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama:0.3.6
 
-
+# Once ollama is up & running locally, run llama3 locally with ollama
+# Add this alias to your shell configuration file (e.g., .bashrc or .zshrc) to make it permanent.
+alias ollama="docker exec -it ollama ollama" >> $HOME/.bashrc  
+# Pull llama3 image 
+ollama pull llama3
+# Run llama3
+ollama run llama3
 ```
 
 ### Run chainlit application
 ```shell
-poetry run chainlit run chatbot.py -w --port 8000
+poetry run chainlit run .\beginner\ai_conversation.py -w --port 8000
 ```
 
+### Run RAG application
+```shell
+poetry run python .\beginner\ai_rag_conversation.py
+```
+
+### Run AI Agent application
+```shell
+poetry run python .\beginner\ai_agent_conversation.py
+```
 
 ## 📚 Documentation
 
 ### Getting Started
-Explore the [Getting Started Guide]().
+[Langchain documentation](https://python.langchain.com/docs/introduction/)
+
+[Huggingface documentation](https://huggingface.co/docs)
+
+[AI concepts by Jay Alammar](https://jalammar.github.io/)
 
