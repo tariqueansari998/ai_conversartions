@@ -1,0 +1,58 @@
+TARIQUE ANWAR ANSARI
+ Solution Architect | Lead Software Engineer | Technophile
+ +91 8017047205 |
+ tariqueansari998@gmail.com |
+ LinkedIn
+ PROFESSIONAL SUMMARY
+ Accomplished Solutions Architect with over 14 years of experience in architecting, designing,
+and delivering scalable, high-performance software solutions. Proven expertise in leading
+cross-functional teams, particularly in the E-Commerce domain, while implementing innovative
+technologies and methodologies. Adept at leveraging cloud platforms, microservices, and
+agile practices to drive operational efficiency and business success.
+ CORE COMPETENCIES
+Cloud Platforms: AWS (Certified Solutions Architect), Azure AD IAM
+Development: Java (Spring Boot, Micronaut), EDA with Kafka
+Database Management: Oracle, PostgreSQL, MongoDB
+DevOps: Docker, Kubernetes, GitLab CI/CD, Jenkins
+Project Management: Agile (Scrum, Kanban), Jira, Confluence, MIRO
+Others: FHIR integration, Microservices architecture, E-Commerce platforms
+ CERTIFICATIONS
+AWS Certified Solutions Architect Associate
+ PROFESSIONAL EXPERIENCE
+ Happiest Minds Technologies – Architect (Bangalore, India)
+Sep 2024 – Present
+Architected the web platform for Happiest Health, implementing FHIR-standard
+integrations with diagnostic labs.
+Developed an organizational knowledge management system to streamline project
+reviews and foster best practices.
+Optimized cross-project collaboration using Microsoft Forms, enhancing efficiency in
+information gathering and dissemination.
+Revamped the recruitment strategy by redesigning the interview process and candidate
+assessment methodology.
+ Tata Consultancy Services – Multiple Roles
+ Cloud Solution Architect / Senior Software Engineer (Southampton, UK)
+Sep 2019 – Aug 2024
+Architected an e-commerce application using MACH principles, AWS services, and
+Commercetools, transitioning to a microservices architecture.
+Developed in-house services with Spring Boot, Kafka, and Micronaut, creating a
+robust marketplace solution.
+Enhanced product media processing with Kafka and AWS Lambda, reducing
+time-to-market from days to minutes.
+Migrated infrastructure to the cloud, implemented Azure AD SSO, and secured SSL/TLS
+communication, improving security and cutting costs.
+Designed real-time Power BI dashboards for business performance tracking.
+ Senior E-Commerce Developer (Kolkata, India)
+Sep 2016 – Aug 2019
+Re-engineered legacy e-commerce platforms using Java 1.8 and Oracle ATG
+Commerce 11.3, creating NextGen Store E-Commerce Platforms.
+Implemented end-to-end e-commerce capabilities, including customer management,
+order processing, returns, and after-sales support.
+ Web Application Developer (Kolkata, India)
+Jun 2010 – Aug 2016
+Developed an enterprise survey tool for HR and external users, enhancing employee
+feedback mechanisms.
+Supported the development and server maintenance for France store applications.
+ EDUCATION
+ B.Tech. in Electrical Engineering
+Asansol Engineering College, Asansol, India
+2005 – 2009
