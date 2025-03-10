@@ -1,4 +1,4 @@
-### 🔥 Learn AI concepts in my blog [Building AI Applications: A Beginner's Guide to RAG, Agents, and Tools](https://medium.com/@tariqueansari998/building-ai-applications-a-beginners-guide-to-rag-agents-and-tools-19788848bd4f) 
+### 🔥 Learn AI concepts in my blog [Building AI Applications: A Beginner's Guide to RAG, Agents, and Tools](https://www.happiestminds.com/blogs/building-intelligent-ai-applications-a-practical-guide-to-key-components/) 
 
 ## Table of Contents
 - [About](#-about)
